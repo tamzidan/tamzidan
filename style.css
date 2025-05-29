@@ -179,7 +179,7 @@
 
         .sidebar-link.active {
             /* background-color: var(--highlight-bg); */
-            color: var(--text-accent);
+            color: var(--text-secondary);
             border-left-color: var(--text-accent);
             font-weight: 500;
         }
