@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">Tamzidan Mahdiyin</a>
+        <div class="header-controls">
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" title="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-title">Personal</div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="#about" class="sidebar-link active" data-section="about">
+                        <i class="fas fa-user"></i>About Me
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#skills" class="sidebar-link" data-section="skills">
+                        <i class="fas fa-code"></i>Skills
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Work</div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="#portfolio" class="sidebar-link" data-section="portfolio">
+                        <i class="fas fa-briefcase"></i>Portfolio
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#experience" class="sidebar-link" data-section="experience">
+                        <i class="fas fa-clock"></i>Experience
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">Connect</div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a href="#contact" class="sidebar-link" data-section="contact">
+                        <i class="fas fa-envelope"></i>Contact
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#cv" class="sidebar-link" data-section="cv">
+                        <i class="fas fa-download"></i>Download CV
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-area">
+            <!-- About Section -->
+            <div class="content-section active" id="about">
+                <h1 class="page-title">About Me</h1>
+                <p class="page-subtitle">Full-Stack Developer & UI/UX Enthusiast dengan passion untuk menciptakan
+                    pengalaman digital yang luar biasa.</p>
+
+                <h2 class="section-title">Halo! 👋</h2>
+                <p>Saya adalah seorang developer yang passionate terhadap teknologi web modern. Selama 3 tahun menempuh
+                    pendidikan di SMKN 1 Maja dengan jurusan Rekayasa Perangkat Lunak (RPL), saya telah mempelajari
+                    dasar-dasar pemrograman dan mengembangkan berbagai proyek pribadi, mulai dari website sederhana
+                    hingga aplikasi web dengan fitur yang lebih kompleks.
+                </p>
+
+                <p>Meskipun saya belum memiliki pengalaman kerja profesional di bidang programming, saya terus mengasah
+                    keterampilan saya melalui proyek mandiri dan eksplorasi teknologi baru. Saya percaya bahwa
+                    konsistensi belajar, rasa ingin tahu, dan semangat untuk berkembang adalah kunci utama untuk menjadi
+                    developer yang handal.
+                </p>
+
+                <p>Saya selalu excited untuk belajar teknologi baru dan mengimplementasikannya dalam proyek-proyek yang
+                    menantang. Saat ini fokus pada pengembangan aplikasi dengan Laravel, React, dan berbagai teknologi
+                    modern lainnya.</p>
+
+                <div class="highlight">
+                    <strong>Fun Fact:</strong> Ketika tidak sedang coding, saya senang menyalurkan kreativitas melalui
+                    fotografi, bereksperimen dengan proyek elektronik sederhana, dan menikmati ketenangan alam lewat
+                    aktivitas luar ruangan seperti hiking dan berkemah. Aktivitas-aktivitas ini membantu saya menjaga
+                    keseimbangan antara dunia digital dan dunia nyata, serta sering kali menjadi sumber inspirasi dalam
+                    menulis kode yang lebih manusiawi dan intuitif.
+                </div>
+
+                <h2 class="section-title">What I Do</h2>
+                <p>Saya mengkhususkan diri dalam:</p>
+                <ul style="margin-left: 2rem; line-height: 1.8;">
+                    <li>Full-Stack Laravel & React</li>
+                    <li>Frontend Development dengan React, Vue.js, dan vanilla JavaScript</li>
+                    <li>Backend Development dengan PHP dan Laravel</li>
+                    <li>UI/UX Design dan prototyping</li>
+                    <!-- <li>Database design dan optimization</li>
+                    <li>Mobile-responsive web development</li> -->
+                </ul>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="content-section" id="skills">
+                <h1 class="page-title">Skills & Technologies</h1>
+                <p class="page-subtitle">Teknologi dan tools yang saya gunakan untuk mengembangkan solusi digital yang
+                    powerful.</p>
+
+                <h2 class="section-title">Frontend Development</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                        <p>Semantic markup & accessibility</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                        <p>Modern styling & animations</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>ES6+ & modern features</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-bootstrap"></i>
+                        <h3>Bootstrap</h3>
+                        <p>Simple styling CSS</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                        <p>Hooks, Context, Redux</p>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Backend & Database</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                        <p>Express, API development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-php"></i>
+                        <h3>PHP</h3>
+                        <p>Laravel, CodeIgniter</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3>MySQL</h3>
+                        <p>Database design & optimization</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <p>Django, data processing</p>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Tools & Others</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git</h3>
+                        <p>Version control & collaboration</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-figma"></i>
+                        <h3>Figma</h3>
+                        <p>UI/UX design & prototyping</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-docker"></i>
+                        <h3>Docker</h3>
+                        <p>Containerization & deployment</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-aws"></i>
+                        <h3>AWS</h3>
+                        <p>Cloud services & hosting</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div class="content-section" id="portfolio">
+                <h1 class="page-title">Portfolio</h1>
+                <p class="page-subtitle">Beberapa proyek yang telah saya kerjakan dengan berbagai teknologi dan klien.
+                </p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">Website Search Film</h3>
+                            <p>Website search film dengan React, dan OMDB API. Fitur mencari film dan akan menampilkan
+                                film dengan sugest yang di submit user.</p>
+                            <div class="highlight">
+                                <div>Demo: <a style="color: var(--text-accent)" href="
+                                        https://cari-film-8ehcbbmii-tamzidans-projects.vercel.app/">Klik
+                                        disini</a>
+                                </div>
+                                <div>Repository: <a style="color: var(--text-accent)"
+                                        href="https://github.com/tamzidan/WebsiteCariFilm">Klik disini</a>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <span
+                                    style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">React
+                                    JS</span>
+                                <span
+                                    style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">OMDB
+                                    API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3 class="portfolio-title">E-Commerce Platform</h3>
+                            <p>Full-stack e-commerce solution dengan React, Node.js, dan MongoDB. Fitur lengkap termasuk
+                                payment gateway dan admin dashboard.</p>
+                            <div style="margin-top: 1rem;">
+                                <span
+                                    style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">React</span>
+                                <span
+                                    style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">Node.js</span>
+                                <span
+                                    style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">MongoDB</span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Analytics Dashboard</h3>
+                        <p>Dashboard analitik real-time untuk monitoring business metrics dengan visualisasi data
+                            yang interaktif.</p>
+                        <div style="margin-top: 1rem;">
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">Vue.js</span>
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">Chart.js</span>
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">Laravel</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                    <!-- <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Mobile App Landing</h3>
+                        <p>Landing page responsive untuk mobile app dengan animasi smooth dan optimized performance.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">HTML5</span>
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">CSS3</span>
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">JavaScript</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                    <!-- <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Learning Management System</h3>
+                        <p>Platform pembelajaran online dengan fitur video streaming, quiz, dan progress tracking
+                            untuk institusi pendidikan.</p>
+                        <div style="margin-top: 1rem;">
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">React</span>
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-right: 0.5rem;">PHP</span>
+                            <span
+                                style="background: var(--text-accent); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">MySQL</span>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="content-section" id="experience">
+                <h1 class="page-title">Work Experience</h1>
+                <p class="page-subtitle">Perjalanan karir saya dalam dunia pengembangan web dan teknologi.</p>
+
+                <!-- <div style="border-left: 3px solid var(--text-accent); padding-left: 2rem; margin: 2rem 0;">
+                    <h3 style="color: var(--text-accent); margin-bottom: 0.5rem;">Senior Frontend Developer</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Tech Solutions Inc. • 2022 -
+                        Present
+                    </p>
+                    <p>Memimpin tim frontend dalam pengembangan aplikasi web kompleks. Bertanggung jawab atas
+                        arsitektur
+                        frontend, code review, dan mentoring junior developers. Berhasil meningkatkan performa
+                        aplikasi
+                        hingga 40%.</p>
+                    <ul style="margin: 1rem 0 2rem 1.5rem; line-height: 1.6;">
+                        <li>Mengembangkan dan maintain 5+ aplikasi web production</li>
+                        <li>Implementasi modern frontend architecture dengan React & TypeScript</li>
+                        <li>Kolaborasi dengan tim backend dan UI/UX designer</li>
+                        <li>Optimisasi performa dan SEO aplikasi web</li>
+                    </ul>
+                </div>
+
+                <div style="border-left: 3px solid var(--text-accent); padding-left: 2rem; margin: 2rem 0;">
+                    <h3 style="color: var(--text-accent); margin-bottom: 0.5rem;">Full-Stack Developer</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Digital Agency XYZ • 2020 - 2022
+                    </p>
+                    <p>Mengembangkan berbagai jenis website dan aplikasi web untuk klien dari berbagai industri.
+                        Menangani seluruh proses development dari planning hingga deployment.</p>
+                    <ul style="margin: 1rem 0 2rem 1.5rem; line-height: 1.6;">
+                        <li>Berhasil menyelesaikan 20+ proyek dengan tingkat kepuasan klien 95%</li>
+                        <li>Mengembangkan sistem e-commerce dan CMS custom</li>
+                        <li>Integrasi dengan berbagai API dan payment gateway</li>
+                        <li>Database design dan optimization</li>
+                    </ul>
+                </div>
+
+                <div style="border-left: 3px solid var(--text-accent); padding-left: 2rem; margin: 2rem 0;">
+                    <h3 style="color: var(--text-accent); margin-bottom: 0.5rem;">Junior Web Developer</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">StartUp ABC • 2019 - 2020</p>
+                    <p>Memulai karir sebagai web developer dengan fokus pada frontend development. Belajar banyak
+                        tentang best practices dan modern web development tools.</p>
+                    <ul style="margin: 1rem 0 2rem 1.5rem; line-height: 1.6;">
+                        <li>Mengembangkan responsive websites dengan HTML, CSS, dan JavaScript</li>
+                        <li>Belajar framework modern seperti React dan Vue.js</li>
+                        <li>Kolaborasi dengan tim design untuk implementasi UI/UX</li>
+                        <li>Maintenance dan update website existing clients</li>
+                    </ul>
+                </div> -->
+
+                <div style="border-left: 3px solid var(--text-accent); padding-left: 2rem; margin: 2rem 0;">
+                    <h3 style="color: var(--text-accent); margin-bottom: 0.5rem;">No Experience</h3>
+                </div>
+
+                <h2 class="section-title">Education</h2>
+                <div style="border-left: 3px solid var(--text-accent); padding-left: 2rem; margin: 2rem 0;">
+                    <h3 style="color: var(--text-accent); margin-bottom: 0.5rem;">S1 Sistem Informasi</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Universitas Terbuka Bandung •
+                        2024 - Present</p>
+                    <p>Fokus pada software engineering, web development, dan database systems. Aktif dalam berbagai
+                        project dan kompetisi programming.</p>
+                </div>
+                <div style="border-left: 3px solid var(--text-accent); padding-left: 2rem; margin: 2rem 0;">
+                    <h3 style="color: var(--text-accent); margin-bottom: 0.5rem;">Rekayasa Perangkat
+                        Lunak (RPL)</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">SMK NEGERI 1 MAJA •
+                        2021 - 2024</p>
+                    <p>Mempelajari dasar-dasar pemrograman, pengembangan web, dan database. Aktif dalam proyek
+                        pembelajaran dan terbiasa bekerja secara individu maupun tim.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="content-section" id="contact">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-subtitle">Mari berkolaborasi! Saya selalu terbuka untuk diskusi proyek baru, peluang
+                    kerja, atau sekadar ngobrol tentang teknologi.</p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>tamzidan01@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+62 857-2240-3823</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bandung, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/tamzidan-mahdiyin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <h2 class="section-title">Send Message</h2>
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form> -->
+
+                <div class="highlight" style="margin-top: 2rem;">
+                    <strong>Response Time:</strong> Saya biasanya merespon email dalam 24 jam. Untuk diskusi yang
+                    lebih
+                    mendalam, mari kita jadwalkan video call!
+                </div>
+            </div>
+
+            <!-- CV Download Section -->
+            <div class="content-section" id="cv">
+                <h1 class="page-title">Download CV</h1>
+                <p class="page-subtitle">Unduh resume lengkap saya untuk informasi detail tentang pengalaman,
+                    pendidikan, dan prestasi.</p>
+
+                <h2 class="section-title">Available Formats</h2>
+                <p>CV tersedia dalam berbagai format untuk kemudahan Anda:</p>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                    <div class="skill-card" style="cursor: pointer;" onclick="downloadCV('pdf')">
+                        <i class="fas fa-file-pdf" style="color: #dc2626;"></i>
+                        <h3>PDF Format</h3>
+                        <p>Standar format, compatible dengan semua device</p>
+                        <button class="btn btn-secondary" style="margin-top: 1rem;">
+                            <i class="fas fa-download"></i>
+                            Download PDF
+                        </button>
+                    </div>
+
+                    <div class="skill-card" style="cursor: pointer;" onclick="downloadCV('docx')">
+                        <i class="fas fa-file-word" style="color: #2563eb;"></i>
+                        <h3>Word Format</h3>
+                        <p>Editable format untuk ATS systems</p>
+                        <button class="btn btn-secondary" style="margin-top: 1rem;">
+                            <i class="fas fa-download"></i>
+                            Download DOCX
+                        </button>
+                    </div>
+                </div>
+
+                <h2 class="section-title">What's Inside</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; text-align: center;">
+                        <i class="fas fa-user-tie"
+                            style="font-size: 2rem; color: var(--text-accent); margin-bottom: 0.5rem;"></i>
+                        <h4>Professional Summary</h4>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; text-align: center;">
+                        <i class="fas fa-briefcase"
+                            style="font-size: 2rem; color: var(--text-accent); margin-bottom: 0.5rem;"></i>
+                        <h4>Work Experience</h4>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; text-align: center;">
+                        <i class="fas fa-graduation-cap"
+                            style="font-size: 2rem; color: var(--text-accent); margin-bottom: 0.5rem;"></i>
+                        <h4>Education</h4>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; text-align: center;">
+                        <i class="fas fa-code"
+                            style="font-size: 2rem; color: var(--text-accent); margin-bottom: 0.5rem;"></i>
+                        <h4>Technical Skills</h4>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; text-align: center;">
+                        <i class="fas fa-trophy"
+                            style="font-size: 2rem; color: var(--text-accent); margin-bottom: 0.5rem;"></i>
+                        <h4>Achievements</h4>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; text-align: center;">
+                        <i class="fas fa-certificate"
+                            style="font-size: 2rem; color: var(--text-accent); margin-bottom: 0.5rem;"></i>
+                        <h4>Certifications</h4>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <strong>Last Updated:</strong> Mei 2025 - CV selalu diupdate dengan informasi dan pengalaman
+                    terbaru.
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-tertiary); border-radius: 8px;">
+                    <h3 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-handshake"></i>
+                        Quick Stats
+                    </h3>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--text-accent);">3+</div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Years Experience</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--text-accent);">4+</div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Projects Completed</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--text-accent);">0+</div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Happy Clients</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--text-accent);">10+</div>
+                            <div style="font-size: 0.875rem; color: var(--text-secondary);">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
