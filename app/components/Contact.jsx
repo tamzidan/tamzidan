@@ -110,7 +110,7 @@ const Contact = () => {
       id: Date.now(),
       name: commentForm.name,
       message: commentForm.message,
-      photo: commentForm.photoPreview || `https://ui-avatars.com/api/?name=${encodeURIComponent(commentForm.name)}&background=00ffdc&color=000754&size=100`,
+      photo: commentForm.photoPreview || `https://ui-avatars.com/api/?name=${encodeURIComponent(commentForm.name)}&background=6b7280&color=ffffff&size=100`,
       timestamp: new Date().toISOString(),
       likes: 0
     };
@@ -147,27 +147,27 @@ const Contact = () => {
       name: 'Instagram',
       icon: <FaInstagram />,
       url: 'https://instagram.com/zain.ahmadf',
-      color: 'from-pink-500 to-purple-600',
-      hoverColor: 'hover:shadow-pink-500/25'
+      color: 'from-gray-500 to-gray-700',
+      hoverColor: 'hover:shadow-gray-500/25'
     },
     {
       name: 'TikTok',
       icon: <SiTiktok />,
       url: 'https://tiktok.com/@zain.ahmadf',
-      color: 'from-black to-red-600',
-      hoverColor: 'hover:shadow-red-500/25'
+      color: 'from-gray-700 to-gray-900',
+      hoverColor: 'hover:shadow-gray-500/25'
     }
   ];
 
   return (
     <section id="contact" className="py-20 px-4 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-transparent to-cyan-900/10 dark:from-black/20 dark:to-cyan-900/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-transparent to-gray-900/10 dark:from-black/20 dark:to-gray-900/10"></div>
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-500/10 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-500"></div>
+      <div className="absolute top-20 left-10 w-20 h-20 bg-gray-500/10 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-gray-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gray-600/10 rounded-full blur-xl animate-pulse delay-500"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Title */}
@@ -179,7 +179,7 @@ const Contact = () => {
           className="text-center mb-20 relative"
         >
           <h2 className="text-5xl md:text-6xl font-bold font-moderniz mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-400 via-gray-400 to-gray-600 bg-clip-text text-transparent">
               GET IN
             </span>
             {' '}
@@ -190,7 +190,7 @@ const Contact = () => {
           </p>
           
           {/* Admin Button - positioned top right */}
-          <button
+          {/* <button
             onClick={() => {
               if (isAuthenticated) {
                 setIsAdminOpen(true);
@@ -198,11 +198,11 @@ const Contact = () => {
                 setIsLoginOpen(true);
               }
             }}
-            className="absolute top-0 right-0 bg-slate-800/50 hover:bg-slate-700/50 backdrop-blur-sm p-3 rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 group"
+            className="absolute top-0 right-0 bg-slate-800/50 hover:bg-slate-700/50 backdrop-blur-sm p-3 rounded-full border border-slate-600/50 hover:border-gray-400/50 transition-all duration-300 group"
             title={isAuthenticated ? "Admin Panel" : "Admin Login"}
           >
-            <FaCog className="text-slate-400 group-hover:text-cyan-400 transition-colors duration-300 group-hover:rotate-90" />
-          </button>
+            <FaCog className="text-slate-400 group-hover:text-gray-400 transition-colors duration-300 group-hover:rotate-90" />
+          </button> */}
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
@@ -216,10 +216,10 @@ const Contact = () => {
           >
             {/* Contact Form Panel */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-gray-600 to-gray-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative bg-slate-900/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 dark:border-gray-700/50">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-full">
+                  <div className="p-3 bg-gradient-to-r from-gray-600 to-gray-600 rounded-full">
                     <FaPaperPlane className="text-white text-xl" />
                   </div>
                   <div>
@@ -231,13 +231,13 @@ const Contact = () => {
                 <form onSubmit={handleContactSubmit} className="space-y-6">
                   <div className="group">
                     <div className="relative">
-                      <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 group-focus-within:text-cyan-400 transition-colors duration-300" />
+                      <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 group-focus-within:text-gray-400 transition-colors duration-300" />
                       <input
                         type="text"
                         placeholder="Nama Anda"
                         value={contactForm.name}
                         onChange={(e) => setContactForm(prev => ({ ...prev, name: e.target.value }))}
-                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-gray-400 focus:ring-2 focus:ring-gray-400/20 transition-all duration-300"
                         required
                       />
                     </div>
@@ -245,13 +245,13 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="relative">
-                      <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 group-focus-within:text-cyan-400 transition-colors duration-300" />
+                      <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 group-focus-within:text-gray-400 transition-colors duration-300" />
                       <input
                         type="email"
                         placeholder="Email Anda"
                         value={contactForm.email}
                         onChange={(e) => setContactForm(prev => ({ ...prev, email: e.target.value }))}
-                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-gray-400 focus:ring-2 focus:ring-gray-400/20 transition-all duration-300"
                         required
                       />
                     </div>
@@ -259,13 +259,13 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="relative">
-                      <FaComment className="absolute left-4 top-6 text-slate-400 group-focus-within:text-cyan-400 transition-colors duration-300" />
+                      <FaComment className="absolute left-4 top-6 text-slate-400 group-focus-within:text-gray-400 transition-colors duration-300" />
                       <textarea
                         placeholder="Pesan Anda"
                         rows="4"
                         value={contactForm.message}
                         onChange={(e) => setContactForm(prev => ({ ...prev, message: e.target.value }))}
-                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 resize-none"
+                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-gray-400 focus:ring-2 focus:ring-gray-400/20 transition-all duration-300 resize-none"
                         required
                       ></textarea>
                     </div>
@@ -276,7 +276,7 @@ const Contact = () => {
                     disabled={isSubmittingContact}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50"
+                    className="w-full bg-gradient-to-r from-gray-600 to-gray-600 hover:from-gray-500 hover:to-gray-500 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-gray-500/25 disabled:opacity-50"
                   >
                     {isSubmittingContact ? (
                       <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -300,7 +300,7 @@ const Contact = () => {
 
             {/* Social Media Panel */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-gray-600 to-gray-700 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative bg-slate-900/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 dark:border-gray-700/50">
                 <h3 className="text-2xl font-bold text-white dark:text-gray-200 mb-6 text-center">Connect With Me</h3>
                 <div className="grid gap-4">
@@ -344,10 +344,10 @@ const Contact = () => {
           >
             {/* Comment Form Panel */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-gray-600 to-gray-700 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative bg-slate-900/80 dark:bg-gray-900/80 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 dark:border-gray-700/50">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-gradient-to-r from-emerald-600 to-blue-600 rounded-full">
+                  <div className="p-3 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full">
                     <FaComment className="text-white text-xl" />
                   </div>
                   <div>
@@ -369,7 +369,7 @@ const Contact = () => {
                             </div>
                           )}
                         </div>
-                        <label className="absolute -bottom-2 -right-2 bg-cyan-600 text-white p-2 rounded-full cursor-pointer hover:bg-cyan-500 transition-colors duration-300">
+                        <label className="absolute -bottom-2 -right-2 bg-gray-600 text-white p-2 rounded-full cursor-pointer hover:bg-gray-500 transition-colors duration-300">
                           <FaCamera className="text-sm" />
                           <input
                             type="file"
@@ -386,7 +386,7 @@ const Contact = () => {
                         placeholder="Your Name"
                         value={commentForm.name}
                         onChange={(e) => setCommentForm(prev => ({ ...prev, name: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all duration-300"
+                        className="w-full px-4 py-3 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-gray-400 focus:ring-2 focus:ring-gray-400/20 transition-all duration-300"
                         required
                       />
                       <textarea
@@ -394,7 +394,7 @@ const Contact = () => {
                         rows="3"
                         value={commentForm.message}
                         onChange={(e) => setCommentForm(prev => ({ ...prev, message: e.target.value }))}
-                        className="w-full px-4 py-3 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 transition-all duration-300 resize-none"
+                        className="w-full px-4 py-3 bg-slate-800/50 dark:bg-gray-800/50 border border-slate-600/50 dark:border-gray-700/50 rounded-xl text-white dark:text-gray-200 placeholder-slate-400 dark:placeholder-slate-500 focus:border-gray-400 focus:ring-2 focus:ring-gray-400/20 transition-all duration-300 resize-none"
                         required
                       ></textarea>
                     </div>
@@ -405,7 +405,7 @@ const Contact = () => {
                     disabled={isSubmittingComment}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-500 hover:to-blue-500 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-emerald-500/25 disabled:opacity-50"
+                    className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-gray-500/25 disabled:opacity-50"
                   >
                     {isSubmittingComment ? (
                       <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -423,7 +423,7 @@ const Contact = () => {
             {/* Comments Display */}
             <div className="space-y-4">
               <h4 className="text-xl font-bold text-white dark:text-gray-200 flex items-center gap-2">
-                <FaComment className="text-cyan-400" />
+                <FaComment className="text-gray-400" />
                 Comments ({comments.length})
               </h4>
               
@@ -436,7 +436,7 @@ const Contact = () => {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9, x: -100 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="group relative bg-slate-800/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/30 dark:border-gray-700/30 hover:border-cyan-400/30 transition-all duration-300"
+                      className="group relative bg-slate-800/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/30 dark:border-gray-700/30 hover:border-gray-400/30 transition-all duration-300"
                     >
                       <div className="flex gap-4">
                         <img 
@@ -463,7 +463,7 @@ const Contact = () => {
                           <div className="flex items-center gap-4 mt-4">
                             <button
                               onClick={() => handleLikeComment(comment.id)}
-                              className="flex items-center gap-2 text-slate-400 hover:text-red-400 transition-colors duration-300 group/like"
+                              className="flex items-center gap-2 text-slate-400 hover:text-gray-300 transition-colors duration-300 group/like"
                             >
                               <FaHeart className="group-hover/like:scale-110 transition-transform duration-300" />
                               <span className="text-sm">{comment.likes}</span>
@@ -507,11 +507,11 @@ const Contact = () => {
           border-radius: 3px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: linear-gradient(to bottom, #06b6d4, #10b981);
+          background: linear-gradient(to bottom, #6b7280, #4b5563);
           border-radius: 3px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(to bottom, #0891b2, #059669);
+          background: linear-gradient(to bottom, #9ca3af, #6b7280);
         }
       `}</style>
     </section>

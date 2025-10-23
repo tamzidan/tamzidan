@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 14 portfolio website for Zain Ahmad Fahrezi, featuring a full-stack architecture with PostgreSQL database (via Supabase), Prisma ORM, authentication, and interactive 3D components.
+This is a Next.js 14 portfolio website for Tamzidan Mahdiyin, featuring a full-stack architecture with PostgreSQL database (via Supabase), Prisma ORM, authentication, and interactive 3D components.
 
 ## Development Commands
 

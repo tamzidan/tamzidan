@@ -45,24 +45,24 @@
   }
 
   .neon-glow {
-    box-shadow: 
-      0 0 5px #00ffdc,
-      0 0 10px #00ffdc,
-      0 0 15px #00ffdc,
-      0 0 20px #00ffdc;
+    box-shadow:
+      0 0 5px #888888,
+      0 0 10px #888888,
+      0 0 15px #888888,
+      0 0 20px #888888;
   }
 
   .neon-text {
     text-shadow:
-      0 0 5px #00ffdc,
-      0 0 10px #00ffdc,
-      0 0 15px #00ffdc,
-      0 0 20px #00ffdc;
+      0 0 5px #888888,
+      0 0 10px #888888,
+      0 0 15px #888888,
+      0 0 20px #888888;
   }
 
   .moving-border {
     position: relative;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 220, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(128, 128, 128, 0.4), transparent);
     animation: moving-border 3s linear infinite;
   }
 
@@ -86,10 +86,10 @@
 
   @keyframes pulse-glow {
     from {
-      box-shadow: 0 0 5px #00ffdc, 0 0 10px #00ffdc, 0 0 15px #00ffdc;
+      box-shadow: 0 0 5px #888888, 0 0 10px #888888, 0 0 15px #888888;
     }
     to {
-      box-shadow: 0 0 10px #00ffdc, 0 0 20px #00ffdc, 0 0 30px #00ffdc;
+      box-shadow: 0 0 10px #888888, 0 0 20px #888888, 0 0 30px #888888;
     }
   }
 }

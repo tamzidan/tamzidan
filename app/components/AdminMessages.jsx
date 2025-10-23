@@ -110,7 +110,7 @@ const AdminMessages = ({ isOpen, onClose }) => {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-gradient-to-r from-cyan-600 to-emerald-600 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-gray-600 to-gray-600 rounded-full">
               <FaShieldAlt className="text-white text-xl" />
             </div>
             <div>
@@ -133,7 +133,7 @@ const AdminMessages = ({ isOpen, onClose }) => {
               <span className="text-slate-300 text-sm font-mono">{sessionTime}</span>
               <button
                 onClick={extendSession}
-                className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                className="text-xs text-gray-400 hover:text-gray-300 transition-colors duration-300"
                 title="Extend session"
               >
                 +15m
@@ -178,15 +178,15 @@ const AdminMessages = ({ isOpen, onClose }) => {
                     onClick={() => openMessage(message)}
                     className={`p-4 rounded-xl cursor-pointer transition-all duration-300 border ${
                       message.status === 'unread'
-                        ? 'bg-cyan-900/20 border-cyan-500/30 hover:bg-cyan-900/30'
+                        ? 'bg-gray-900/20 border-gray-500/30 hover:bg-gray-900/30'
                         : 'bg-slate-800/50 border-slate-600/30 hover:bg-slate-700/50'
-                    } ${selectedMessage?.id === message.id ? 'ring-2 ring-cyan-400' : ''}`}
+                    } ${selectedMessage?.id === message.id ? 'ring-2 ring-gray-400' : ''}`}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1">
                           {message.status === 'unread' ? (
-                            <FaEnvelope className="text-cyan-400 text-sm flex-shrink-0" />
+                            <FaEnvelope className="text-gray-400 text-sm flex-shrink-0" />
                           ) : (
                             <FaEnvelopeOpen className="text-slate-400 text-sm flex-shrink-0" />
                           )}
@@ -209,7 +209,7 @@ const AdminMessages = ({ isOpen, onClose }) => {
                         </p>
                       </div>
                       {message.status === 'unread' && (
-                        <div className="w-3 h-3 bg-cyan-400 rounded-full flex-shrink-0"></div>
+                        <div className="w-3 h-3 bg-gray-400 rounded-full flex-shrink-0"></div>
                       )}
                     </div>
                   </motion.div>
@@ -229,7 +229,7 @@ const AdminMessages = ({ isOpen, onClose }) => {
                       <h3 className="text-xl font-bold text-white mb-2">
                         {selectedMessage.name}
                       </h3>
-                      <p className="text-cyan-400 mb-1">{selectedMessage.email}</p>
+                      <p className="text-gray-400 mb-1">{selectedMessage.email}</p>
                       <p className="text-slate-400 text-sm">
                         {new Date(selectedMessage.timestamp).toLocaleDateString('id-ID', {
                           year: 'numeric',
@@ -243,7 +243,7 @@ const AdminMessages = ({ isOpen, onClose }) => {
                     <div className="flex items-center gap-2">
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         selectedMessage.status === 'unread'
-                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
+                          ? 'bg-gray-500/20 text-gray-300 border border-gray-500/30'
                           : 'bg-slate-600/20 text-slate-300 border border-slate-600/30'
                       }`}>
                         {selectedMessage.status === 'unread' ? 'Unread' : 'Read'}

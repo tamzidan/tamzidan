@@ -71,7 +71,7 @@ const Header = () => {
         className="relative block text-light-text dark:text-dark-text font-[Rubik] font-bold text-base tracking-wider py-2 transition-transform duration-300 hover:scale-110 group"
       >
         {children}
-        <span className="absolute bottom-1 left-0 block h-[2px] w-0 bg-[#00ffdc] transition-all duration-500 group-hover:w-full"></span>
+        <span className="absolute bottom-1 left-0 block h-[2px] w-0 bg-[#888888] transition-all duration-500 group-hover:w-full"></span>
       </a>
     </li>
   );
@@ -90,7 +90,7 @@ const Header = () => {
             {/* Drop Shadow Gradient Animated */}
             {!isScrolled && (
               <div
-                className="pointer-events-none absolute left-0 right-0 z-10 from-cyan-400 via-cyan-300 to-blue-500 dark:from-cyan-700 dark:via-cyan-600 dark:to-blue-800"
+                className="pointer-events-none absolute left-0 right-0 z-10 from-gray-400 via-gray-300 to-gray-500 dark:from-gray-700 dark:via-gray-600 dark:to-gray-800"
                 style={{
                   top: '0',
                   height: '90px',
@@ -100,7 +100,7 @@ const Header = () => {
                   backgroundSize: '300% 100%',
                   animation: 'gradientShadowMove 6s linear infinite',
                   opacity: 1,
-                  filter: 'drop-shadow(0 16px 24px rgba(64,255,170,0.35))',
+                  filter: 'drop-shadow(0 16px 24px rgba(128,128,128,0.35))',
                 }}
               ></div>
             )}
@@ -135,14 +135,14 @@ const Header = () => {
                   <a href="#home" className="flex items-center gap-3">
                     {/* <img src={bangzenLogo} alt="Bangzen Logo" className="h-12 w-12 flex-shrink-0" /> */}
                     <div>
-                      <h1 className="font-moderniz text-sm text-cyan-400 dark:text-cyan-300 whitespace-nowrap">Tamzidan Mahdiyin</h1>
-                      <p className="font-moderniz text-[9px] text-blue-900 dark:text-blue-700" style={{ textShadow: '0.5px 0.5px 0 #00ffdc, -0.5px -0.5px 0 #00ffdc, 0.5px -0.5px 0 #00ffdc, -0.5px 0.5px 0 #00ffdc' }}>
+                      <h1 className="font-moderniz text-sm text-gray-400 dark:text-gray-300 whitespace-nowrap">Tamzidan Mahdiyin</h1>
+                      <p className="font-moderniz text-[9px] text-gray-700 dark:text-gray-600" style={{ textShadow: '0.5px 0.5px 0 #888888, -0.5px -0.5px 0 #888888, 0.5px -0.5px 0 #888888, -0.5px 0.5px 0 #888888' }}>
                         Let's see the awesome Experience
                       </p>
                     </div>
                   </a>
                   {/* Mobile: Hamburger Button (Right) */}
-                  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-cyan-400 dark:text-cyan-300 text-3xl pointer-events-auto">
+                  <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-400 dark:text-gray-300 text-3xl pointer-events-auto">
                     &#9776;
                   </button>
                 </div>
@@ -159,8 +159,8 @@ const Header = () => {
                   <a href="#home" className="flex items-center gap-3">
                     {/* <img src={bangzenLogo} alt="Bangzen Logo" className="h-12 w-12" /> */}
                     <div className="block">
-                      <h1 className="font-moderniz text-base text-cyan-400 dark:text-cyan-300">Zain Ahmad Fahrezi</h1>
-                      <p className="font-moderniz text-[10px] text-blue-900 dark:text-blue-700" style={{ textShadow: '0.5px 0.5px 0 #00ffdc, -0.5px -0.5px 0 #00ffdc, 0.5px -0.5px 0 #00ffdc, -0.5px 0.5px 0 #00ffdc' }}>
+                      <h1 className="font-moderniz text-base text-gray-400 dark:text-gray-300">Tamzidan Mahdiyin</h1>
+                      <p className="font-moderniz text-[10px] text-gray-700 dark:text-gray-600" style={{ textShadow: '0.5px 0.5px 0 #888888, -0.5px -0.5px 0 #888888, 0.5px -0.5px 0 #888888, -0.5px 0.5px 0 #888888' }}>
                         Let's see the awesome Experience
                       </p>
                     </div>
@@ -175,10 +175,10 @@ const Header = () => {
                     <ThemeSwitcher />
                     <button
                       onClick={handleAdminAccess}
-                      className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors duration-300 pointer-events-auto"
+                      className="flex items-center gap-2 text-slate-400 hover:text-gray-300 transition-colors duration-300 pointer-events-auto"
                       title={isAuthenticated ? "Admin Dashboard" : "Admin Login"}
                     >
-                      <FaShieldAlt className={`text-lg ${isAuthenticated ? 'text-green-400' : 'text-slate-400'}`} />
+                      <FaShieldAlt className={`text-lg ${isAuthenticated ? 'text-gray-400' : 'text-slate-400'}`} />
                     </button>
                   </div>
                 </div>
@@ -205,9 +205,9 @@ const Header = () => {
                         <li>
                           <button
                             onClick={handleAdminAccess}
-                            className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                            className="flex items-center gap-2 text-slate-400 hover:text-gray-300 transition-colors duration-300"
                           >
-                            <FaShieldAlt className={`text-lg ${isAuthenticated ? 'text-green-400' : 'text-slate-400'}`} />
+                            <FaShieldAlt className={`text-lg ${isAuthenticated ? 'text-gray-400' : 'text-slate-400'}`} />
                             <span>Admin</span>
                           </button>
                         </li>
@@ -248,7 +248,7 @@ const Header = () => {
         <div className="fixed bottom-6 right-6 z-[60] flex flex-col gap-2">
           <button
             onClick={() => setAdminView(adminView === 'messages' ? 'comments' : 'messages')}
-            className="bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
+            className="bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2"
           >
             {adminView === 'messages' ? '💬 Comments' : '📧 Messages'}
           </button>

@@ -1,4 +1,4 @@
-# ZAIN AHMAD FAHREZI PORTFOLIO PROJECT
+# TAMZIDAN MAHDIYIN PORTFOLIO PROJECT
 
 This is a React project developed using Vite — a modern build tool known for its high performance, Hot Module Replacement (HMR) support, and fast development time.
 
@@ -49,7 +49,7 @@ This is a React project developed using Vite — a modern build tool known for i
 
 ## ❗ Copyright & License
 
-This project is an original work by **Zain Ahmad Fahrezi** and is intended for personal reference use only.
+This project is an original work by **Tamzidan Mahdiyin** and is intended for personal reference use only.
 
 🚫 **Strictly prohibited to plagiarize, reupload, or use any part of the code without proper credit or permission.**
 
@@ -70,7 +70,7 @@ Thank you for respecting the developer's work! 🙏
 If you find this project helpful and wish to support:
 
 * 💳 **Dana:** 0896-0433-2830
-* 🏦 **BRI Bank Account:** 0342 0107 8321 503 (Zain Ahmad Fahrezi)
+* 🏦 **BRI Bank Account:** 0342 0107 8321 503 (Tamzidan Mahdiyin)
 * Paypal : paypal.me/zainahmadfahrezi
 
 Your support mePayns a lot and helps me continue building open-source projects. Thank you! 🙌

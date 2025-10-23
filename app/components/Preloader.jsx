@@ -11,7 +11,7 @@ const Preloader = ({ onFinished }) => {
   const [fadeOut, setFadeOut] = useState(false);
   // 1. State baru untuk melacak status loading Spline
   const [isAssetLoaded, setIsAssetLoaded] = useState(false);
-  const fullText = "www.zainahmadfahrezi.com";
+  const fullText = "www.tamzidanmahdiyin.com";
 
   // 2. Fungsi yang akan dipanggil saat Spline selesai dimuat
   const handleAssetLoad = () => {
@@ -80,7 +80,7 @@ const Preloader = ({ onFinished }) => {
                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.2, ease: "easeOut" } }}
                 className="text-4xl md:text-6xl font-moderniz font-bold mb-4"
               >
-                Zain Ahmad Fahrezi
+                Tamzidan Mahdiyin
               </motion.h1>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -95,13 +95,13 @@ const Preloader = ({ onFinished }) => {
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.8 } }}
                 className="flex justify-center gap-6"
               >
-                <a href="https://github.com/zainahmadf28" target="_blank" rel="noopener noreferrer" className="hover:text-[#00ffdc] transition-all duration-300 transform hover:scale-110">
+                <a href="https://github.com/zainahmadf28" target="_blank" rel="noopener noreferrer" className="hover:text-[#888888] transition-all duration-300 transform hover:scale-110">
                   <Github size={32} />
                 </a>
-                <a href="https://www.linkedin.com/in/zain-ahmad-fahrezi-7a8a912a7/" target="_blank" rel="noopener noreferrer" className="hover:text-[#00ffdc] transition-all duration-300 transform hover:scale-110">
+                <a href="https://www.linkedin.com/in/zain-ahmad-fahrezi-7a8a912a7/" target="_blank" rel="noopener noreferrer" className="hover:text-[#888888] transition-all duration-300 transform hover:scale-110">
                   <Linkedin size={32} />
                 </a>
-                <a href="https://www.instagram.com/zainahmadf" target="_blank" rel="noopener noreferrer" className="hover:text-[#00ffdc] transition-all duration-300 transform hover:scale-110">
+                <a href="https://www.instagram.com/zainahmadf" target="_blank" rel="noopener noreferrer" className="hover:text-[#888888] transition-all duration-300 transform hover:scale-110">
                   <Instagram size={32} />
                 </a>
               </motion.div>

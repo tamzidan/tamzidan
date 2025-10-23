@@ -15,6 +15,7 @@ import ProfileCard from './components/ProfileCard/ProfileCard';
 import { IconCloud } from './components/IconCloud';
 import Spline from '@splinetool/react-spline';
 import { VelocityScroll } from './components/VelocityScroll';
+import About from './components/About';
 import ProjectSection from './components/ProjectSection';
 import Contact from './components/Contact';
 import Image from 'next/image';
@@ -69,7 +70,7 @@ export default function HomePage() {
         title={`Toggle 3D Assets (${is3dEnabled ? 'On' : 'Off'})`}
         className={`fixed top-24 right-4 z-50 p-3 rounded-full border backdrop-blur-sm transition-all duration-300 ease-in-out hover:scale-110
           ${is3dEnabled
-            ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-[0_0_12px_2px_#00ffdc80]'
+            ? 'bg-gray-500/20 border-gray-400 text-gray-300 shadow-[0_0_12px_2px_#88888880]'
             : 'bg-slate-800/50 border-slate-700 text-slate-400'
           }`}
       >
@@ -82,7 +83,7 @@ export default function HomePage() {
       {/* MAIN CONTENT */}
       <main className="relative z-10 px-8 max-w-7xl mx-auto">
         {/* BAGIAN HERO */}
-        <section id="home" className="flex flex-col md:flex-row items-center gap-10 pt-20 pb-16 lg:pt-0 lg:pb-20">
+        <section id="home" className="flex flex-col md:flex-row items-center gap-10 pt-20 pb-16 lg:pt-0 lg:pb-20 mt-16 mb-16">
           {/* Blok Teks */}
           <div className="flex-1 text-light-text dark:text-dark-text space-y-6 pt-16 md:pt-40 order-last md:order-none">
             {/* <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}>
@@ -102,14 +103,14 @@ export default function HomePage() {
                 <Skills />
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.0, ease: "easeOut" }} className="flex flex-row gap-4 mt-8">
-                <a href="https://github.com/ZainAhmadF28" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/[0.8] text-white transition-all duration-300 hover:border-cyan-400 hover:bg-slate-800 hover:shadow-[0_0_24px_2px_#00ffdc]">
-                    <FaGithub className="h-6 w-6 text-slate-400 transition-all duration-300 group-hover:text-cyan-300" />
+                <a href="https://github.com/ZainAhmadF28" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/[0.8] text-white transition-all duration-300 hover:border-gray-400 hover:bg-slate-800 hover:shadow-[0_0_24px_2px_#888888]">
+                    <FaGithub className="h-6 w-6 text-slate-400 transition-all duration-300 group-hover:text-gray-300" />
                 </a>
-                <a href="https://instagram.com/zain.ahmadf" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/[0.8] text-white transition-all duration-300 hover:border-cyan-400 hover:bg-slate-800 hover:shadow-[0_0_24px_2px_#00ffdc]">
-                    <FaInstagram className="h-6 w-6 text-slate-400 transition-all duration-300 group-hover:text-cyan-300" />
+                <a href="https://instagram.com/zain.ahmadf" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/[0.8] text-white transition-all duration-300 hover:border-gray-400 hover:bg-slate-800 hover:shadow-[0_0_24px_2px_#888888]">
+                    <FaInstagram className="h-6 w-6 text-slate-400 transition-all duration-300 group-hover:text-gray-300" />
                 </a>
-                <a href="https://linkedin.com/in/zainahmadfahrezi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/[0.8] text-white transition-all duration-300 hover:border-cyan-400 hover:bg-slate-800 hover:shadow-[0_0_24px_2px_#00ffdc]">
-                    <FaLinkedin className="h-6 w-6 text-slate-400 transition-all duration-300 group-hover:text-cyan-300" />
+                <a href="https://linkedin.com/in/zainahmadfahrezi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-700 bg-slate-900/[0.8] text-white transition-all duration-300 hover:border-gray-400 hover:bg-slate-800 hover:shadow-[0_0_24px_2px_#888888]">
+                    <FaLinkedin className="h-6 w-6 text-slate-400 transition-all duration-300 group-hover:text-gray-300" />
                 </a>
             </motion.div>
           </div>
@@ -122,11 +123,11 @@ export default function HomePage() {
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
                   <Image
-                    src="/src/assets/images/ZAINFIX.png"
-                    alt="Zain Ahmad Fahrezi"
+                    src="/assets/images/tamzidan.jpg"
+                    alt="Tamzidan Mahdiyin"
                     width={300}
                     height={300}
-                    className="rounded-full border-4 border-cyan-400 shadow-[0_0_24px_2px_#00ffdc]"
+                    className="rounded-full border-4 border-gray-400 shadow-[0_0_24px_2px_#888888]"
                     priority
                   />
                 </div>
@@ -136,15 +137,15 @@ export default function HomePage() {
         </section>
 
         {/* SECTION LANYARD/DISCORD */}
-        <section id="lanyard" className="py-10">
+        {/* <section id="lanyard" className="py-10">
           <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true }}>
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="flex-1">
                 {is3dEnabled ? (
                   <Lanyard userId="680363465755148318" />
                 ) : (
-                  <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 rounded-lg border border-cyan-400/30">
-                    <p className="text-cyan-400 text-lg">Discord Status (3D assets disabled)</p>
+                  <div className="w-full h-96 flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 rounded-lg border border-gray-400/30">
+                    <p className="text-gray-400 text-lg">Discord Status (3D assets disabled)</p>
                   </div>
                 )}
               </div>
@@ -157,10 +158,10 @@ export default function HomePage() {
               )}
             </div>
           </motion.div>
-        </section>
+        </section> */}
 
         {/* STATISTIK CARDS */}
-        <section id="stats" className="py-16">
+        {/* <section id="stats" className="py-16">
           <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true }}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
@@ -170,10 +171,14 @@ export default function HomePage() {
               ))}
             </div>
           </motion.div>
-        </section>
+        </section> */}
+
+        <About />
 
         {/* PROJECT SECTION */}
-        <ProjectSection />
+        <div className="py-16 mt-16">
+          <ProjectSection />
+        </div>
 
         {/* CONTACT SECTION */}
         <Contact />
@@ -181,7 +186,7 @@ export default function HomePage() {
         {/* VELOCITY SCROLL */}
         <section className="py-10">
           <VelocityScroll defaultVelocity={2} className="font-moderniz text-4xl font-bold text-light-heading dark:text-dark-heading">
-            ZAIN AHMAD FAHREZI • FULL STACK DEVELOPER • REACT SPECIALIST •
+            TAMZIDAN MAHDIYIN • FULL STACK DEVELOPER • REACT SPECIALIST •
           </VelocityScroll>
         </section>
       </main>

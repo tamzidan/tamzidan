@@ -63,7 +63,7 @@ const dummyProjects = [
 ];
 
 // ===================================
-// DATA SERTIFIKAT ZAIN AHMAD FAHREZI
+// DATA SERTIFIKAT TAMZIDAN MAHDIYIN
 // ===================================
 const userCertificates = [
     {
@@ -84,8 +84,8 @@ const userCertificates = [
         title: "Junior Web Developer (BNSP)",
         issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
         date: "Sep 2024",
-        link: "/certificates/SERTIFIKAT BNSP JUNIOR WEB DEVELOPER ZAIN AHMAD FAHREZI.jpeg",
-        image: "/certificate-images/SERTIFIKAT BNSP JUNIOR WEB DEVELOPER ZAIN AHMAD FAHREZI.jpg",
+        link: "/certificates/SERTIFIKAT BNSP JUNIOR WEB DEVELOPER TAMZIDAN MAHDIYIN.jpeg",
+        image: "/certificate-images/SERTIFIKAT BNSP JUNIOR WEB DEVELOPER TAMZIDAN MAHDIYIN.jpg",
     },
     {
         title: "Belajar Membuat Front-End Web untuk Pemula",
@@ -161,25 +161,25 @@ const userCertificates = [
 
 const techStack = {
     frontend: [
-    { name: "React", icon: <FaReact className="text-[#61DAFB]" /> },
+    { name: "React", icon: <FaReact className="text-white" /> },
     { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
-    { name: "JavaScript", icon: <FaJsSquare className="text-[#F7DF1E]" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#38B2AC]" /> },
-    { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26]" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-[#1572B6]" /> },
+    { name: "JavaScript", icon: <FaJsSquare className="text-gray-300" /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-white" /> },
+    { name: "HTML5", icon: <FaHtml5 className="text-gray-300" /> },
+    { name: "CSS3", icon: <FaCss3Alt className="text-gray-400" /> },
   ],
   backend: [
-    { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-white" /> },
     { name: "Express", icon: <SiExpress className="text-white" /> },
   ],
   database: [
-    { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-[#336791]" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-gray-300" /> },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-gray-400" /> },
   ],
   tools: [
     { name: "Git & GitHub", icon: <FaGithub className="text-white" /> },
     { name: "Vercel", icon: <SiVercel className="text-white" /> },
-    { name: "Figma", icon: <FaFigma className="text-[#F24E1E]" /> },
+    { name: "Figma", icon: <FaFigma className="text-gray-300" /> },
     { name: "Tools Lain", icon: <FaTools className="text-gray-400" /> },
   ],
 };
@@ -215,7 +215,7 @@ const CertificateCard = ({ cert, onClick }) => {
             whileHover={{ y: -8 }}
             onClick={() => onClick(cert)}
         >
-            <div className="relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-400/30 transition-all duration-500">
+            <div className="relative h-64 sm:h-72 rounded-2xl overflow-hidden shadow-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gray-400/30 transition-all duration-500">
                 <div className="absolute inset-0">
                     <img src={cert.image} alt={cert.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 group-hover:from-slate-900/95 transition-all duration-500"></div>
@@ -223,10 +223,10 @@ const CertificateCard = ({ cert, onClick }) => {
                 <div className="absolute inset-0 p-5 flex flex-col justify-between">
                     <div className="flex-1 flex items-start justify-between">
                         <div className="bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
-                            <span className="text-xs font-semibold text-cyan-300 uppercase tracking-wider">{cert.issuer}</span>
+                            <span className="text-xs font-semibold text-gray-300 uppercase tracking-wider">{cert.issuer}</span>
                         </div>
-                        <div className="bg-emerald-500/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-emerald-400/30">
-                            <span className="text-xs font-bold text-emerald-300">{cert.date}</span>
+                        <div className="bg-gray-500/20 backdrop-blur-md px-3 py-1.5 rounded-full border border-gray-400/30">
+                            <span className="text-xs font-bold text-gray-300">{cert.date}</span>
                         </div>
                     </div>
                     <div className="space-y-3">
@@ -239,14 +239,14 @@ const CertificateCard = ({ cert, onClick }) => {
                                 <span className="text-sm font-medium">View Certificate</span>
                             </div>
                             <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="bg-cyan-500/20 backdrop-blur-md p-2 rounded-full border border-cyan-400/30">
-                                    <FaExternalLinkAlt className="text-cyan-300 text-sm" />
+                                <div className="bg-gray-500/20 backdrop-blur-md p-2 rounded-full border border-gray-400/30">
+                                    <FaExternalLinkAlt className="text-gray-300 text-sm" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/0 via-transparent to-emerald-500/0 group-hover:from-cyan-500/10 group-hover:to-emerald-500/10 transition-all duration-500"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gray-500/0 via-transparent to-gray-500/0 group-hover:from-gray-500/10 group-hover:to-gray-500/10 transition-all duration-500"></div>
             </div>
         </motion.div>
     );
@@ -275,8 +275,8 @@ const CertificatePreviewModal = ({ certificate, onClose }) => {
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="absolute top-4 right-4 z-10">
-                    <button onClick={onClose} className="bg-red-500/20 hover:bg-red-500/30 backdrop-blur-md p-3 rounded-full border border-red-400/30 transition-all duration-300 group">
-                        <FaTimes className="text-red-300 group-hover:text-red-200" />
+                    <button onClick={onClose} className="bg-gray-500/20 hover:bg-gray-500/30 backdrop-blur-md p-3 rounded-full border border-gray-400/30 transition-all duration-300 group">
+                        <FaTimes className="text-gray-300 group-hover:text-gray-200" />
                     </button>
                 </div>
                 <div className="p-6 sm:p-8">
@@ -285,8 +285,8 @@ const CertificatePreviewModal = ({ certificate, onClose }) => {
                             <div>
                                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">{certificate.title}</h2>
                                 <div className="flex flex-wrap items-center gap-4">
-                                    <span className="bg-cyan-500/20 px-4 py-2 rounded-full text-cyan-300 font-semibold border border-cyan-400/30">{certificate.issuer}</span>
-                                    <span className="bg-emerald-500/20 px-4 py-2 rounded-full text-emerald-300 font-semibold border border-emerald-400/30">{certificate.date}</span>
+                                    <span className="bg-gray-500/20 px-4 py-2 rounded-full text-gray-300 font-semibold border border-gray-400/30">{certificate.issuer}</span>
+                                    <span className="bg-gray-500/20 px-4 py-2 rounded-full text-gray-300 font-semibold border border-gray-400/30">{certificate.date}</span>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +295,7 @@ const CertificatePreviewModal = ({ certificate, onClose }) => {
                         <img src={certificate.image} alt={certificate.title} className="w-full h-auto max-h-[60vh] object-contain" />
                     </div>
                     <div className="mt-6 flex justify-center">
-                        <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-cyan-500/25">
+                        <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="group bg-gradient-to-r from-gray-600 to-gray-600 hover:from-gray-500 hover:to-gray-500 px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-gray-500/25">
                             <FaDownload className="group-hover:scale-110 transition-transform duration-300" />
                             <span>Download Certificate</span>
                         </a>
@@ -318,27 +318,27 @@ const ProjectCard = ({ project }) => {
 
     return (
     <a href={project.link} target="_blank" rel="noopener noreferrer"
-        className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-cyan-500/30"
+        className="group relative h-64 sm:h-72 rounded-2xl overflow-hidden transition-shadow duration-300 hover:shadow-lg hover:shadow-gray-500/30"
         style={{ background: `url('${project.image}') center/cover no-repeat`, cursor: 'pointer' }}
     >
         <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors duration-300 flex flex-col justify-between p-4 sm:p-6 text-white">
         <div>
-            <h3 className="text-lg sm:text-xl font-bold text-cyan-300">{project.title}</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-300">{project.title}</h3>
             <p className="text-slate-300 mt-2 text-xs sm:text-sm leading-relaxed">{project.description}</p>
         </div>
         <div className="flex items-end justify-between">
             <div className="flex flex-wrap gap-2 mt-4">
             {project.tech.map((t, i) => (
-                <span key={i} className="flex items-center gap-1 text-xs font-mono px-2 py-1 rounded-full bg-cyan-900/70 text-cyan-200 border border-cyan-800/30 backdrop-blur-sm">
+                <span key={i} className="flex items-center gap-1 text-xs font-mono px-2 py-1 rounded-full bg-gray-900/70 text-gray-200 border border-gray-800/30 backdrop-blur-sm">
                 {techIcons?.[t] || t}
                 </span>
             ))}
             </div>
-            <FaExternalLinkAlt className="text-slate-300 group-hover:text-cyan-200 transition-colors duration-300" />
+            <FaExternalLinkAlt className="text-slate-300 group-hover:text-gray-200 transition-colors duration-300" />
         </div>
         </div>
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div className="absolute inset-0 rounded-2xl border border-cyan-300/10 pointer-events-none"></div>
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gray-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 rounded-2xl border border-gray-300/10 pointer-events-none"></div>
     </a>
     );
 };
@@ -408,7 +408,7 @@ function ProjectSection() {
         className="text-center mb-20"
       >
         <h2 className="text-4xl font-bold font-moderniz">
-            <span style={{color: "#00ffdc"}}><LineShadowText shadowColor="#00b3a4">PORTFOLIO</LineShadowText></span>
+            <span style={{color: "#888888"}}><LineShadowText shadowColor="#666666">PORTFOLIO</LineShadowText></span>
             {' '}
             <span style={{ color: "#fff" }}><LineShadowText shadowColor="#bbbbbb">SHOWCASE</LineShadowText></span>
         </h2>
@@ -418,14 +418,14 @@ function ProjectSection() {
         <div className="flex justify-center mb-12">
           <motion.div
             layout
-            className="inline-flex w-full max-w-4xl rounded-3xl p-2 shadow-lg border border-slate-800 bg-gradient-to-r from-[#101624] via-[#0a1627] to-[#0a223a] backdrop-blur-md"
-            style={{ background: "linear-gradient(90deg, #101624 0%, #0a1627 50%, #0a223a 100%)", boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.18)", border: "1px solid rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
+            className="inline-flex w-full max-w-4xl rounded-3xl p-2 shadow-lg border border-slate-800 bg-gradient-to-r from-[#0a0a0a] via-[#1a1a1a] to-[#2a2a2a] backdrop-blur-md"
+            style={{ background: "linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.4)", border: "1px solid rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}
           >
             {tabs.map((tab) => (
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative flex flex-1 flex-col items-center justify-center px-2 py-7 rounded-2xl font-semibold text-base transition-colors duration-300 outline-none ${activeTab === tab.id ? "text-white" : "text-slate-400 hover:text-cyan-300"}`}
+                className={`relative flex flex-1 flex-col items-center justify-center px-2 py-7 rounded-2xl font-semibold text-base transition-colors duration-300 outline-none ${activeTab === tab.id ? "text-white" : "text-slate-400 hover:text-gray-300"}`}
                 whileTap={{ scale: 0.97 }}
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
@@ -434,7 +434,7 @@ function ProjectSection() {
                 {activeTab === tab.id && (
                   <motion.span
                     layoutId="tab-underline"
-                    className="absolute inset-0 bg-gradient-to-br from-[#0a223a] to-[#101624] rounded-2xl"
+                    className="absolute inset-0 bg-gradient-to-br from-[#3a3a3a] to-[#1a1a1a] rounded-2xl"
                     transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
                     style={{ zIndex: -1, opacity: 0.96 }}
                   />
@@ -450,7 +450,7 @@ function ProjectSection() {
 
         <div
           className="rounded-3xl p-0 md:p-6 shadow-xl border border-slate-800/60 mx-auto max-w-7xl bg-clip-padding"
-          style={{ background: "rgba(17, 24, 39, 0.55)", boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.18)", border: "1px solid rgba(255,255,255,0.08)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
+          style={{ background: "rgba(20, 20, 20, 0.55)", boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.4)", border: "1px solid rgba(255,255,255,0.08)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -464,8 +464,8 @@ function ProjectSection() {
               {activeTab === 'Projects' && (
                 <>
                   <div className="flex justify-center gap-4 mb-8">
-                    <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === 'Web/Apps' ? 'bg-cyan-700/80 text-white border-cyan-400 shadow-cyan-500/10 shadow-lg' : 'bg-slate-900/60 text-cyan-200 border-slate-700 hover:bg-cyan-800/40 hover:text-white'}`} onClick={() => setProjectCategory('Web/Apps')}>Web/Apps</button>
-                    <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === '3D Design' ? 'bg-cyan-700/80 text-white border-cyan-400 shadow-cyan-500/10 shadow-lg' : 'bg-slate-900/60 text-cyan-200 border-slate-700 hover:bg-cyan-800/40 hover:text-white'}`} onClick={() => setProjectCategory('3D Design')}>3D Design</button>
+                    <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === 'Web/Apps' ? 'bg-gray-700/80 text-white border-gray-400 shadow-gray-500/10 shadow-lg' : 'bg-slate-900/60 text-gray-200 border-slate-700 hover:bg-gray-800/40 hover:text-white'}`} onClick={() => setProjectCategory('Web/Apps')}>Web/Apps</button>
+                    <button className={`px-5 py-2 rounded-full font-semibold transition-all duration-200 border ${projectCategory === '3D Design' ? 'bg-gray-700/80 text-white border-gray-400 shadow-gray-500/10 shadow-lg' : 'bg-slate-900/60 text-gray-200 border-slate-700 hover:bg-gray-800/40 hover:text-white'}`} onClick={() => setProjectCategory('3D Design')}>3D Design</button>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredProjects.length > 0 ? (
@@ -492,7 +492,7 @@ function ProjectSection() {
                       {visibleCertificatesCount < userCertificates.length ? (
                         <motion.button
                           onClick={handleShowMore}
-                          className="group bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+                          className="group bg-gradient-to-r from-gray-600 to-gray-600 hover:from-gray-500 hover:to-gray-500 px-8 py-3 rounded-full text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-gray-500/25"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >
@@ -517,10 +517,10 @@ function ProjectSection() {
                 <div className="max-w-4xl mx-auto space-y-8">
                   {Object.entries(techStack).map(([category, techs]) => (
                     <div key={category}>
-                      <h3 className="text-xl font-bold text-cyan-300 capitalize mb-4 border-b-2 border-slate-800 pb-2">{category}</h3>
+                      <h3 className="text-xl font-bold text-gray-300 capitalize mb-4 border-b-2 border-slate-800 pb-2">{category}</h3>
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
                         {techs.map((tech, i) => (
-                          <div key={i} className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-slate-900/70 border border-slate-800 transition-all duration-300 hover:bg-slate-800/50 hover:border-cyan-500/30">
+                          <div key={i} className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-slate-900/70 border border-slate-800 transition-all duration-300 hover:bg-slate-800/50 hover:border-gray-500/30">
                             <div className="text-4xl">{tech.icon}</div>
                             <p className="text-sm text-slate-300">{tech.name}</p>
                           </div>
