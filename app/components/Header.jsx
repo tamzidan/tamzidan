@@ -228,13 +228,15 @@ const Header = () => {
         <AdminMessages
           isOpen={showAdminDashboard}
           onClose={handleCloseAdminDashboard}
+          onSwitchToComments={() => setAdminView('comments')}
         />
       )}
-      
+
       {adminView === 'comments' && (
         <AdminComments
           isOpen={showAdminDashboard}
           onClose={handleCloseAdminDashboard}
+          onSwitchToMessages={() => setAdminView('messages')}
         />
       )}
 

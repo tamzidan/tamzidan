@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
   FaComment,
   FaComments,
-  FaUser, 
-  FaCalendar, 
-  FaTrash, 
+  FaUser,
+  FaCalendar,
+  FaTrash,
   FaThumbsUp,
   FaTimes,
   FaSignOutAlt,
@@ -15,11 +15,12 @@ import {
   FaShieldAlt,
   FaEdit,
   FaCheck,
-  FaPlus
+  FaPlus,
+  FaEnvelope
 } from 'react-icons/fa';
 import { useAdmin } from '../contexts/AdminContext';
 
-const AdminComments = ({ isOpen, onClose }) => {
+const AdminComments = ({ isOpen, onClose, onSwitchToMessages }) => {
   const [comments, setComments] = useState([]);
   const [selectedComment, setSelectedComment] = useState(null);
   const [sessionTime, setSessionTime] = useState('');
@@ -204,6 +205,18 @@ const AdminComments = ({ isOpen, onClose }) => {
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Switch to Messages Button */}
+            {onSwitchToMessages && (
+              <button
+                onClick={onSwitchToMessages}
+                className="bg-blue-500/20 hover:bg-blue-500/30 backdrop-blur-md px-4 py-2 rounded-full border border-blue-400/30 transition-all duration-300 group flex items-center gap-2"
+                title="Switch to Messages"
+              >
+                <FaEnvelope className="text-blue-300 group-hover:text-blue-200" />
+                <span className="text-blue-300 group-hover:text-blue-200 text-sm font-semibold">Messages</span>
+              </button>
+            )}
+
             {/* Add Comment Button */}
             <button
               onClick={() => setIsAddingComment(true)}

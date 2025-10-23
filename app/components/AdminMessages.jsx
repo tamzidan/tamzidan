@@ -2,37 +2,62 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaEnvelope, 
-  FaEnvelopeOpen, 
-  FaUser, 
-  FaCalendar, 
-  FaTrash, 
+import {
+  FaEnvelope,
+  FaEnvelopeOpen,
+  FaUser,
+  FaCalendar,
+  FaTrash,
   FaEye,
   FaEyeSlash,
   FaTimes,
   FaCheck,
   FaSignOutAlt,
   FaClock,
-  FaShieldAlt
+  FaShieldAlt,
+  FaComment
 } from 'react-icons/fa';
 import { useAdmin } from '../contexts/AdminContext';
 
-const AdminMessages = ({ isOpen, onClose }) => {
+const AdminMessages = ({ isOpen, onClose, onSwitchToComments }) => {
   const [messages, setMessages] = useState([]);
   const [selectedMessage, setSelectedMessage] = useState(null);
   const [sessionTime, setSessionTime] = useState('');
-  
+  const [isLoading, setIsLoading] = useState(false);
+
   const { logout, getSessionTimeRemaining, extendSession } = useAdmin();
 
-  // Load messages from localStorage
+  // Load messages from database
   useEffect(() => {
-    if (isOpen) {
-      const savedMessages = localStorage.getItem('portfolioContactMessages');
-      if (savedMessages) {
-        setMessages(JSON.parse(savedMessages));
+    const loadMessages = async () => {
+      if (isOpen) {
+        setIsLoading(true);
+        try {
+          const response = await fetch('/api/contact');
+          if (response.ok) {
+            const data = await response.json();
+            setMessages(data.data || []);
+          } else {
+            // Fallback to localStorage if API fails
+            const savedMessages = localStorage.getItem('portfolioContactMessages');
+            if (savedMessages) {
+              setMessages(JSON.parse(savedMessages));
+            }
+          }
+        } catch (error) {
+          console.error('Failed to load messages:', error);
+          // Fallback to localStorage
+          const savedMessages = localStorage.getItem('portfolioContactMessages');
+          if (savedMessages) {
+            setMessages(JSON.parse(savedMessages));
+          }
+        } finally {
+          setIsLoading(false);
+        }
       }
-    }
+    };
+
+    loadMessages();
   }, [isOpen]);
 
   // Session timer
@@ -58,11 +83,33 @@ const AdminMessages = ({ isOpen, onClose }) => {
 
   // Mark message as read
   const markAsRead = (messageId) => {
-    const updatedMessages = messages.map(msg => 
+    const updatedMessages = messages.map(msg =>
       msg.id === messageId ? { ...msg, status: 'read' } : msg
     );
     setMessages(updatedMessages);
     localStorage.setItem('portfolioContactMessages', JSON.stringify(updatedMessages));
+    if (selectedMessage && selectedMessage.id === messageId) {
+      setSelectedMessage({ ...selectedMessage, status: 'read' });
+    }
+  };
+
+  // Toggle message status
+  const toggleMessageStatus = (messageId) => {
+    const updatedMessages = messages.map(msg =>
+      msg.id === messageId
+        ? { ...msg, status: msg.status === 'read' ? 'unread' : 'read' }
+        : msg
+    );
+    setMessages(updatedMessages);
+    localStorage.setItem('portfolioContactMessages', JSON.stringify(updatedMessages));
+
+    // Update selected message if it's the one being toggled
+    if (selectedMessage && selectedMessage.id === messageId) {
+      setSelectedMessage({
+        ...selectedMessage,
+        status: selectedMessage.status === 'read' ? 'unread' : 'read'
+      });
+    }
   };
 
   // Delete message
@@ -127,6 +174,18 @@ const AdminMessages = ({ isOpen, onClose }) => {
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Switch to Comments Button */}
+            {onSwitchToComments && (
+              <button
+                onClick={onSwitchToComments}
+                className="bg-purple-500/20 hover:bg-purple-500/30 backdrop-blur-md px-4 py-2 rounded-full border border-purple-400/30 transition-all duration-300 group flex items-center gap-2"
+                title="Switch to Comments"
+              >
+                <FaComment className="text-purple-300 group-hover:text-purple-200" />
+                <span className="text-purple-300 group-hover:text-purple-200 text-sm font-semibold">Comments</span>
+              </button>
+            )}
+
             {/* Session Timer */}
             <div className="bg-slate-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-slate-600/50 flex items-center gap-2">
               <FaClock className="text-slate-400" />
@@ -141,7 +200,7 @@ const AdminMessages = ({ isOpen, onClose }) => {
             </div>
 
             {/* Logout Button */}
-            <button 
+            <button
               onClick={handleLogout}
               className="bg-orange-500/20 hover:bg-orange-500/30 backdrop-blur-md p-3 rounded-full border border-orange-400/30 transition-all duration-300 group"
               title="Logout"
@@ -150,7 +209,7 @@ const AdminMessages = ({ isOpen, onClose }) => {
             </button>
 
             {/* Close Button */}
-            <button 
+            <button
               onClick={onClose}
               className="bg-red-500/20 hover:bg-red-500/30 backdrop-blur-md p-3 rounded-full border border-red-400/30 transition-all duration-300 group"
             >
@@ -248,9 +307,25 @@ const AdminMessages = ({ isOpen, onClose }) => {
                       }`}>
                         {selectedMessage.status === 'unread' ? 'Unread' : 'Read'}
                       </div>
+
+                      {/* Toggle Status Button */}
+                      <button
+                        onClick={() => toggleMessageStatus(selectedMessage.id)}
+                        className="bg-blue-500/20 hover:bg-blue-500/30 p-2 rounded-full border border-blue-400/30 transition-all duration-300 group"
+                        title={selectedMessage.status === 'unread' ? 'Mark as Read' : 'Mark as Unread'}
+                      >
+                        {selectedMessage.status === 'unread' ? (
+                          <FaEye className="text-blue-300 group-hover:text-blue-200 text-sm" />
+                        ) : (
+                          <FaEyeSlash className="text-blue-300 group-hover:text-blue-200 text-sm" />
+                        )}
+                      </button>
+
+                      {/* Delete Button */}
                       <button
                         onClick={() => deleteMessage(selectedMessage.id)}
                         className="bg-red-500/20 hover:bg-red-500/30 p-2 rounded-full border border-red-400/30 transition-all duration-300 group"
+                        title="Delete Message"
                       >
                         <FaTrash className="text-red-300 group-hover:text-red-200 text-sm" />
                       </button>

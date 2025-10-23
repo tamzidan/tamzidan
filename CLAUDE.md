@@ -82,13 +82,14 @@ JWT_SECRET=           # Secret for JWT token signing
 - react-three/fiber, drei, rapier for Three.js integration
 
 **Styling:**
-- Tailwind CSS with custom theme (light/dark mode via ThemeContext)
-- Custom fonts: Inter (body), "moderniz" and "cascadia" fonts
-- Color scheme: Cyan (#00ffdc) as primary accent color
+- Tailwind CSS with custom theme (permanently set to dark mode)
+- Custom fonts: Inter (body), "moderniz" and "bauhaus" fonts
+- Color scheme: Monochrome white and black with gray accents
+- Custom Tailwind colors defined in `tailwind.config.js` for light/dark variants
 
 **State Management:**
 - React Context API for global state
-- `ThemeContext` - Manages light/dark theme with localStorage persistence
+- `ThemeContext` - Theme is permanently set to dark mode (toggleTheme is disabled)
 - `NavbarContext` - Controls navbar visibility/state
 - `AdminContext` - Handles admin authentication state
 
@@ -101,9 +102,10 @@ Most components are client-side ('use client') due to:
 - Context consumption
 
 **2. 3D Asset Toggle**
-- State managed in main page.js: `is3dEnabled`
-- Toggle button (FaCube) in top-right corner
-- Falls back to static image when disabled
+- State managed in main page.js: `is3dEnabled` (defaults to false)
+- Toggle button (FaCube) is commented out but available
+- Falls back to static profile image (tamzidan.jpg) when disabled
+- Spline scene loads from: https://prod.spline.design/UIL0P8J7jz9z3HXY/scene.splinecode
 
 **3. Authentication Flow**
 - Login: POST `/api/auth/login` → Returns JWT token

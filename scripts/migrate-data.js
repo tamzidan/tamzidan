@@ -54,7 +54,7 @@ async function main() {
         image: '/images/portfolio-1.jpg',
         githubUrl: 'https://github.com/ZainAhmadF28/portfolio',
         liveUrl: 'https://zainahmadfahrezi.vercel.app',
-        technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Vercel'],
+        technologies: JSON.stringify(['React', 'Tailwind CSS', 'JavaScript', 'Vercel']),
         category: 'web',
         featured: true
       },
@@ -64,7 +64,7 @@ async function main() {
         image: '/images/portfolio-2.jpg',
         githubUrl: 'https://github.com/ZainAhmadF28/ecommerce',
         liveUrl: 'https://example-ecommerce.vercel.app',
-        technologies: ['Next.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
+        technologies: JSON.stringify(['Next.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS']),
         category: 'web',
         featured: true
       }

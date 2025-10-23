@@ -94,6 +94,11 @@ export default function HomePage() {
 
       {/* HEADER FIXED DI ATAS MAIN */}
       <Header />
+      <section className="py-20">
+      <VelocityScroll defaultVelocity={2} className="font-moderniz text-4xl font-bold text-light-heading dark:text-dark-heading">
+            WELCOMEㅤWELCOMEㅤWELCOMEㅤWELCOMEㅤWELCOMEㅤWELCOMEㅤWELCOME
+      </VelocityScroll>
+      </section>
 
       {/* MAIN CONTENT */}
       <main className="relative z-10 px-8 max-w-7xl mx-auto">
@@ -199,12 +204,13 @@ export default function HomePage() {
         <Contact />
 
         {/* VELOCITY SCROLL */}
-        <section className="py-10">
-          <VelocityScroll defaultVelocity={2} className="font-moderniz text-4xl font-bold text-light-heading dark:text-dark-heading">
-            TAMZIDAN MAHDIYIN • FULL STACK DEVELOPER • REACT SPECIALIST •
-          </VelocityScroll>
-        </section>
+        {/* <section className="py-10 w-full"> */}
+
+        {/* </section> */}
       </main>
+          <VelocityScroll defaultVelocity={2} className="font-moderniz text-4xl font-bold text-light-heading dark:text-dark-heading">
+            GOODBYEㅤGOODBYEㅤGOODBYEㅤGOODBYEㅤGOODBYEㅤGOODBYE
+          </VelocityScroll>
     </div>
       )}
     </>
