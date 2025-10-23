@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Squares from './components/Squares';
 import TextGenerateEffect from "./components/text-generate-effect";
@@ -41,6 +42,9 @@ function SplineWrapper({ onError }) {
 }
 
 export default function HomePage() {
+  // State untuk Preloader
+  const [isLoading, setIsLoading] = useState(true);
+
   // State untuk mengontrol visibilitas aset 3D (default: non-aktif karena Spline error)
   const [is3dEnabled, setIs3dEnabled] = useState(false);
   const [splineError, setSplineError] = useState(false);
@@ -48,6 +52,11 @@ export default function HomePage() {
   // Fungsi untuk toggle state
   const toggle3dAssets = () => {
     setIs3dEnabled(prev => !prev);
+  };
+
+  // Handler ketika preloader selesai
+  const handlePreloaderFinish = () => {
+    setIsLoading(false);
   };
 
   // Data untuk card statistik
@@ -58,11 +67,17 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text overflow-hidden">
-      {/* LAPISAN 1: BACKGROUND ANIMASI */}
-      <div className="absolute inset-0 z-0">
-        <Squares speed={0.3} squareSize={35} direction="diagonal" borderColor="rgba(255, 255, 255, 0.07)" hoverFillColor="rgba(13, 13, 58, 0.45)" />
-      </div>
+    <>
+      {/* Tampilkan Preloader saat loading */}
+      {isLoading && <Preloader onFinished={handlePreloaderFinish} />}
+
+      {/* Tampilkan konten utama setelah loading selesai */}
+      {!isLoading && (
+        <div className="relative min-h-screen bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text overflow-hidden">
+          {/* LAPISAN 1: BACKGROUND ANIMASI */}
+          <div className="absolute inset-0 z-0">
+            <Squares speed={0.3} squareSize={35} direction="diagonal" borderColor="rgba(255, 255, 255, 0.07)" hoverFillColor="rgba(13, 13, 58, 0.45)" />
+          </div>
       
       {/* Tombol untuk mengaktifkan/menonaktifkan aset 3D */}
       {/* <button
@@ -191,5 +206,7 @@ export default function HomePage() {
         </section>
       </main>
     </div>
+      )}
+    </>
   );
 }

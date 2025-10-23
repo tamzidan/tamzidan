@@ -9,7 +9,6 @@ import { useAdmin } from '../contexts/AdminContext';
 import AdminLogin from './AdminLogin';
 import AdminMessages from './AdminMessages';
 import AdminComments from './AdminComments';
-import ThemeSwitcher from './ThemeSwitcher';
 
 const CLIP_PATH =
   'polygon(0 0, 100% 0, 100% 80%, 68% 80%, 64% 100%, 36% 100%, 32% 80%, 0 80%)';
@@ -169,10 +168,9 @@ const Header = () => {
                   {/* Desktop: Right Navigation & Admin Button */}
                   <div className="flex items-center gap-4">
                     <ul className="flex items-center list-none gap-16">
-                      <NavLink href="#projects">Project</NavLink>
+                      <NavLink href="#project">Project</NavLink>
                       <NavLink href="#contact">Contact</NavLink>
                     </ul>
-                    <ThemeSwitcher />
                     <button
                       onClick={handleAdminAccess}
                       className="flex items-center gap-2 text-slate-400 hover:text-gray-300 transition-colors duration-300 pointer-events-auto"
@@ -197,11 +195,8 @@ const Header = () => {
                       <ul className="flex flex-row flex-wrap justify-center items-center gap-x-8 gap-y-3 mt-4 list-none">
                         <NavLink href="#home">Home</NavLink>
                         <NavLink href="#about">About</NavLink>
-                        <NavLink href="#projects">Project</NavLink>
+                        <NavLink href="#project">Project</NavLink>
                         <NavLink href="#contact">Contact</NavLink>
-                        {/* <li>
-                          <ThemeSwitcher />
-                        </li> */}
                         <li>
                           <button
                             onClick={handleAdminAccess}

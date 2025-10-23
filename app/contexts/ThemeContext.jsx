@@ -1,32 +1,24 @@
 'use client';
 
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useEffect } from 'react';
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
-  const [mounted, setMounted] = useState(false);
+  // Force dark theme untuk semua user
+  const theme = 'dark';
 
   useEffect(() => {
-    setMounted(true);
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
+    // Selalu set dark mode
+    document.documentElement.classList.add('dark');
+    // Hapus localStorage theme agar tidak ada konflik
+    localStorage.removeItem('theme');
   }, []);
 
-  useEffect(() => {
-    if (mounted) {
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      localStorage.setItem('theme', theme);
-    }
-  }, [theme, mounted]);
-
+  // toggleTheme tidak melakukan apa-apa, hanya untuk backward compatibility
   const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+    // Dark mode permanen, tidak bisa diubah
+    console.log('Theme is permanently set to dark mode');
   };
 
   return (

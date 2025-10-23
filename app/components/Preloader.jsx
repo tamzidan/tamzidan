@@ -3,20 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Instagram } from 'lucide-react';
 import DotGrid from './DotGrid';
-import Spline from '@splinetool/react-spline';
+import Robot3D from './Robot3D';
 
 const Preloader = ({ onFinished }) => {
   const [typedText, setTypedText] = useState('');
   const [showContent, setShowContent] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  // 1. State baru untuk melacak status loading Spline
-  const [isAssetLoaded, setIsAssetLoaded] = useState(false);
-  const fullText = "www.tamzidanmahdiyin.com";
-
-  // 2. Fungsi yang akan dipanggil saat Spline selesai dimuat
-  const handleAssetLoad = () => {
-    setIsAssetLoaded(true);
-  };
+  const fullText = "tamzidan.com";
 
   useEffect(() => {
     const initialTimer = setTimeout(() => {
@@ -25,27 +18,26 @@ const Preloader = ({ onFinished }) => {
     return () => clearTimeout(initialTimer);
   }, []);
 
-  // 3. Modifikasi efek utama untuk memeriksa status loading aset
+  // Typing animation dan auto-close setelah selesai
   useEffect(() => {
     if (showContent) {
-      // Logika animasi mengetik (tidak berubah)
+      // Animasi mengetik
       if (typedText.length < fullText.length) {
         const typingTimer = setTimeout(() => {
           setTypedText(fullText.slice(0, typedText.length + 1));
         }, 120);
         return () => clearTimeout(typingTimer);
-      } 
-      // KONDISI BARU: transisi keluar hanya jika teks selesai diketik DAN aset sudah dimuat
-      else if (typedText.length === fullText.length && isAssetLoaded) {
+      }
+      // Transisi keluar setelah teks selesai diketik
+      else if (typedText.length === fullText.length) {
         const exitTimer = setTimeout(() => {
           setFadeOut(true);
           setTimeout(onFinished, 1000); // Tunggu animasi fade-out
-        }, 1500); // Jeda setelah semua selesai
+        }, 2000); // Jeda 2 detik setelah typing selesai
         return () => clearTimeout(exitTimer);
       }
     }
-    // Tambahkan isAssetLoaded ke dependency array
-  }, [typedText, showContent, fullText, onFinished, isAssetLoaded]);
+  }, [typedText, showContent, fullText, onFinished]);
 
   return (
     <AnimatePresence>
@@ -66,15 +58,11 @@ const Preloader = ({ onFinished }) => {
               animate={{ opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
               className="text-center relative z-10 p-4"
             >
-              <div className="flex justify-center mb-2 mt-[-24px] md:mt-[-32px]">
-                <div className="w-[320px] h-[180px] md:w-[480px] md:h-[260px]">
-                  {/* 4. Tambahkan prop onLoad ke komponen Spline */}
-                  <Spline 
-                    scene="https://prod.spline.design/FcZ66SFMX1YbF-0I/scene.splinecode" 
-                    onLoad={handleAssetLoad}
-                  />
+              {/* <div className="flex justify-center mb-8">
+                <div className="w-[280px] h-[320px] md:w-[360px] md:h-[400px]">
+                  <Robot3D />
                 </div>
-              </div>
+              </div> */}
               <motion.h1
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.2, ease: "easeOut" } }}
