@@ -33,7 +33,7 @@ const TextGenerateEffect = ({
         {wordsArray.map((word, idx) => (
           <motion.span
             key={word + idx}
-            className="dark:text-white text-black opacity-0"
+            className="dark:text-white text-white opacity-0"
             style={{
               filter: filter ? "blur(10px)" : "none",
             }}
@@ -48,7 +48,7 @@ const TextGenerateEffect = ({
   return (
     <div className={cn("font-cascadia", className)}>
       <div className="mt-4">
-        <div className="dark:text-white text-black text-md leading-snug tracking-wide sm:text-center md:text-center lg:text-left">
+        <div className="dark:text-white text-white text-md leading-snug tracking-wide sm:text-center md:text-center lg:text-left">
           {renderWords()}
         </div>
       </div>

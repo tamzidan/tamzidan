@@ -44,8 +44,10 @@ function ParallaxText({
       if (containerRef.current && textRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
         const textWidth = textRef.current.offsetWidth;
-        const newRepetitions = Math.ceil(containerWidth / textWidth) + 2;
-        setRepetitions(newRepetitions);
+        if (textWidth > 0) {
+          const newRepetitions = Math.ceil(containerWidth / textWidth) + 2;
+          setRepetitions(newRepetitions);
+        }
       }
     };
 
@@ -79,7 +81,7 @@ function ParallaxText({
       {...props}
     >
       <motion.div className="inline-block" style={{ x }}>
-        {Array.from({ length: repetitions }).map((_, i) => (
+        {Array.from({ length: Math.max(1, repetitions) }).map((_, i) => (
           <span key={i} ref={i === 0 ? textRef : null}>
             {children}{" "}
           </span>
@@ -104,7 +106,7 @@ export function VelocityScroll({
       )}
       {...props}
     >
-      {Array.from({ length: numRows }).map((_, i) => (
+      {Array.from({ length: Math.max(1, numRows) }).map((_, i) => (
         <ParallaxText
           key={i}
           baseVelocity={defaultVelocity * (i % 2 === 0 ? 1 : -1)}

@@ -133,9 +133,9 @@ const Header = () => {
                 <div className="w-full flex items-center justify-between md:hidden">
                   {/* Mobile: Brand Logo & Text (Left) */}
                   <a href="#home" className="flex items-center gap-3">
-                    <img src={bangzenLogo} alt="Bangzen Logo" className="h-12 w-12 flex-shrink-0" />
+                    {/* <img src={bangzenLogo} alt="Bangzen Logo" className="h-12 w-12 flex-shrink-0" /> */}
                     <div>
-                      <h1 className="font-moderniz text-sm text-cyan-400 dark:text-cyan-300 whitespace-nowrap">Zain Ahmad Fahrezi</h1>
+                      <h1 className="font-moderniz text-sm text-cyan-400 dark:text-cyan-300 whitespace-nowrap">Tamzidan Mahdiyin</h1>
                       <p className="font-moderniz text-[9px] text-blue-900 dark:text-blue-700" style={{ textShadow: '0.5px 0.5px 0 #00ffdc, -0.5px -0.5px 0 #00ffdc, 0.5px -0.5px 0 #00ffdc, -0.5px 0.5px 0 #00ffdc' }}>
                         Let's see the awesome Experience
                       </p>
@@ -157,7 +157,7 @@ const Header = () => {
                   
                   {/* Desktop: Center Logo & Text */}
                   <a href="#home" className="flex items-center gap-3">
-                    <img src={bangzenLogo} alt="Bangzen Logo" className="h-12 w-12" />
+                    {/* <img src={bangzenLogo} alt="Bangzen Logo" className="h-12 w-12" /> */}
                     <div className="block">
                       <h1 className="font-moderniz text-base text-cyan-400 dark:text-cyan-300">Zain Ahmad Fahrezi</h1>
                       <p className="font-moderniz text-[10px] text-blue-900 dark:text-blue-700" style={{ textShadow: '0.5px 0.5px 0 #00ffdc, -0.5px -0.5px 0 #00ffdc, 0.5px -0.5px 0 #00ffdc, -0.5px 0.5px 0 #00ffdc' }}>
@@ -199,9 +199,9 @@ const Header = () => {
                         <NavLink href="#about">About</NavLink>
                         <NavLink href="#projects">Project</NavLink>
                         <NavLink href="#contact">Contact</NavLink>
-                        <li>
+                        {/* <li>
                           <ThemeSwitcher />
-                        </li>
+                        </li> */}
                         <li>
                           <button
                             onClick={handleAdminAccess}

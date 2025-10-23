@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 
 // Definisikan teks yang akan ditampilkan secara bergantian
-const TEXTS_TO_TYPE = ["Front End Developer", "3D Designer"];
+const TEXTS_TO_TYPE = ["Software Engineer", "Fullstack Developer", "UI/UX Enthusiast"];
 
 // Komponen utama
 export default function LoopingGradientText({
   className = "",
-  colors = ["#ffaa40", "#9c40ff", "#ffaa40"],
+  colors = ["#31210dff", "#3b0b0bff", "#331d03ff"],
   animationSpeed = 3,
   typingSpeed = 100,
   deletingSpeed = 75,

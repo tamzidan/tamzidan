@@ -44,8 +44,8 @@ const Squares = ({
       const y2 = canvas.height / 2 - Math.sin(angle) * r;
 
       const gradient = ctx.createLinearGradient(x1, y1, x2, y2);
-      gradient.addColorStop(0, "#000428");
-      gradient.addColorStop(1, "#002545ff");
+      gradient.addColorStop(0, "#000000ff");
+      gradient.addColorStop(1, "#000000ff");
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
